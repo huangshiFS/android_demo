@@ -1267,3 +1267,141 @@ Installed as /usr/local/bin/adb
 + adb命令来源
   + \system\core\toolbox和\frameworks\base\cmds就是我们所有ADB命令和Shell命令的来源了。
 
+
+
+#### 3.Android控件架构与自定义控件详解
+
+**控件是每个Android App都必不可少的一部分**
+
+##### 1.Android控件架构
+
+&emsp;Android中的每个空间都会在界面中占得一块矩形的区域，而在Android中，控件大致被分为两类，即ViewGroup控件与View控件。ViewGroup控件作为父控件可以包含多个View控件，并管理器包含的View控件。
+
+##### 2.View的测量
+
+&emsp;Android系统在绘制View前，也必须对View进行测量，即告诉系统该画一个多大的View。这个过程在onMeasure()方法中进行。
+
+##### 3.View的绘制
+
+&emsp;当测了好了一个View之后，我们就可以简单地重写onDraw()方法，并在Canvas对象上来绘制所需要的图形。
+
+##### 4.ViewGroup的测量
+
+&emsp;ViewGroup会去管理其子View,其中一个管理项目就是负责View的显示大小。
+
+##### 5.ViewGroup的绘制
+
+&emsp;ViewGroup会使用dispatchDraw()方法来绘制其子View。
+
+##### 6.自定义View
+
+##### 7.自定义ViewGroup
+
+##### 8.事件拦截机制分析
+
+
+
+#### 4.ListView常用优化技巧
+
+##### 1.使用ViewHolder模式提高效率
+
+##### 2.设置项目间分割线
+
+##### 3.隐藏ListView的滚动条
+
+##### 4.取消ListView的Item点击效果
+
+##### 5.设置ListView需要显示在第几项
+
+##### 6.动态修改ListView
+
+##### 7.遍历ListView中的所有Item
+
+##### 8.处理空ListView
+
+##### 9.ListView滑动监听
+
+
+
+#### 5.Android Scroll分析
+
+##### 1.滑动效果是如何产生的
+
+&emsp;要实现View的滑动，就必须监听用户触摸的事件，并根据事件传入的坐标，动态且不断地改变View的坐标，从而实现View跟随用户触动的滑动而滑动。
+
+##### 2.实现滑动的七种方法
+
++ layout方法
++ offsetLeftAndRight()与offsetTopAndBottom()
++ LayoutParams
++ scrollTo与scrollBy
++ Scroller
++ 属性动画
++ ViewDragHelper
+
+
+
+
+
+#### 6.Android绘图机制与处理技巧
+
+##### 1.屏幕的尺寸信息
+
+##### 2.2D绘图基础
+
+##### 3.Android XML绘图
+
+##### 4.Android绘图技巧
+
+##### 5.Android图像处理之色彩特效
+
+##### 6.Android图像处理之图形特效处理
+
+##### 7.Android图像处理之画笔特效处理
+
+##### 8.View之孪生兄弟---SurfaceView
+
+
+
+
+
+#### 7.Android动画机制与使用技巧
+
+##### 1.Android View动画框架
+
+##### 2.Android属性动画分析
+
+##### 3.Android布局动画
+
+##### 4.Interpolators(插值器)
+
+##### 5.自定义动画
+
+##### 6. Android 5.X SVG矢量动画机制
+
+##### 7.Android动画特效
+
+
+
+
+
+
+
+### 五、Activity与Activity调用栈分析
+
+#### 1.Activity
+
+##### 1.起源
+
+&emsp;当开发者创建Activity之后，通过调用setContentView(view)方法来给该Acitivity指定一个显示的界面，并以此为基础提供给用户交互的接口。系统采用Activity栈方式来管理Activity。
+
+##### 2.Activity形态
+
+
+
+### 六、
+
+
+
+
+
